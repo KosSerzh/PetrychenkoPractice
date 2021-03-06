@@ -44,8 +44,37 @@
 // answers [2]= prompt ('What is your age','');
 // console.log(typeof(answers));
 
-const category = 'toys';
-console.log(`https://someurl.com/${category}/5`);
+// const category = 'toys';
+// console.log(`https://someurl.com/${category}/5`);
 
-const user =  'Kos';
-alert (`helo ${user}`);
+// const user =  'Kos';
+// alert (`hello ${user}`);
+// console.log('arr' + '-object');
+// console.log(4 + '-object');
+
+// let incr = 10,
+//     decr = 10;
+// // incr ++;
+// // decr --;
+
+// console.log (++incr); //Префиксн изменю перед применением
+// console.log (--decr);
+// console.log (incr++); //Постфикс измен после применения
+// console.log (decr--);
+
+// console.log (5%2);
+
+console.log (2+2*2 === '8');
+
+// && //Оператор И
+// || // Оператор ИЛИ
+// ! Оператор отрицания
+// const isChecked = false,
+//       isClosed = true ;
+// console.log (isChecked && isClosed);
+
+const isChecked = false,
+      isClosed = false ;
+console.log (isChecked || ! isClosed);
+
+
