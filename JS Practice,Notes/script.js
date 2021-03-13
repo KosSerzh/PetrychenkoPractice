@@ -64,7 +64,7 @@
 
 // console.log (5%2);
 
-// console.log (2+2*2 === '8');
+console.log (2+2*2 === '8');
 
 // && //Оператор И
 // || // Оператор ИЛИ
@@ -73,43 +73,8 @@
 //       isClosed = true ;
 // console.log (isChecked && isClosed);
 
-// const isChecked = false,
-//       isClosed = false ;
-// console.log (isChecked || ! isClosed);
+const isChecked = false,
+      isClosed = false ;
+console.log (isChecked || ! isClosed);
 
-// if (4==4) {
-//     console.log('Ok');
-// } else {
-//     console.log('error');
-// }
 
-// const num = 50;
-// if (num<49) {
-//     console.log('Error');
-// }else if(num>51){
-//     console.log('TooMuch');
-// }else {
-//     console.log('Ok');
-// }
-
-// const num = 50;
-// (num === 50 ) ? console.log('Ok') : console.log('Error');
-
-// const num = 50;
-// switch (num) {
-//     case 49:
-//         console.log('fault');
-//         break;
-//         case 51:
-//             console.log('fault');
-//             break;
-//         case 52:
-//             console.log('Ok');
-//             break;
-//         default:
-//             console.log('Not this time');
-//             break;
-
-// }
-
-const num = 50;
