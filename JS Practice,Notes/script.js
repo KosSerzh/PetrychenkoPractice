@@ -71,11 +71,11 @@
 // ! Оператор отрицания
 // const isChecked = false,
 //       isClosed = true ;
-// console.log (isChecked && isClosed);
+// console.log (isChecked && isClosed); //false
 
 // const isChecked = false,
 //       isClosed = false ;
-// console.log (isChecked || ! isClosed);
+// console.log (isChecked || ! isClosed); //true
 
 // if (4==4) {
 //     console.log('Ok');
@@ -99,11 +99,11 @@
 // switch (num) {
 //     case 49:
 //         console.log('fault');
-//         break;
+//             break;
 //         case 51:
 //             console.log('fault');
 //             break;
-//         case 52:
+//         case 51:
 //             console.log('Ok');
 //             break;
 //         default:
@@ -112,4 +112,99 @@
 
 // }
 
-const num = 50;
+// let num = 50;
+
+// while (num<55){
+//     num ++;
+//     console.log(num);
+// }
+
+// let num = 50;
+// do {
+//     num ++;
+//     console.log(num);
+// }
+// while (num < 55);
+
+
+// let num = 50;
+// for (let i = 1;i<10; i++){
+//     if (i == 8 ){
+//         // break;
+//         continue;
+//     }
+//     console.log(num); 
+// }
+
+//FUNCTIONS
+      //FUNCTION DECLARATION
+// let str = 'string'; //Глобальная переменная
+// function showMessage(text){ //в () АРГУМЕНТ функции
+//     str = 'changed'; //обращение к глобальной перерменной, ее изменения
+//     console.log(text);
+//     let num = 1;// внутри функц локальн перем.
+// }
+// showMessage ('Hey'); // вызов функции 
+function calc(num1,num2){
+    console.log(num1+num2);
+}
+const num1 = prompt ("?"),
+      num2 = prompt ("?");
+calc();
+// console.log (str); // Глобальная перем. 
+// // console.log (num); // локалные перем. не видны глобально
+
+
+//  function practice (a, b) {
+//      return (a+b);
+//  }
+
+//  console.log (practice(2,3));  //5
+//  console.log (practice(2,4));  //6
+
+//  function ret(){
+//      let num = 10 ;
+//      return num;
+//  }
+//  const newNum = ret();
+//  console.log (newNum);
+
+
+     //FUNCTION EXPRESSION
+// const logger = function (){
+//     console.log ('KyKy');
+// };
+// logger ();
+
+     // ARROW FUNCTIONS ()=>
+// const arrowFunction = (a,b) =>{
+
+//     return a+b; 
+// };
+// console.log ('hola' , arrowFunction(2,3));
+
+
+//METHODS AND PROPERTIES
+    //Strings
+// const str = 'test';
+// const arr = [1, 2, 3];
+// console.log (str.length); // 4
+// console.log (arr.length); //3
+// console.log (str.toUpperCase());
+// const fruit = 'Some fruit';
+// console.log (fruit.indexOf('fruit'));
+
+
+// const logg = 'Hello World';
+// console.log (logg.slice(6,11)); // World
+// console.log (logg.substring (6,10)); // Worl
+// console.log (logg.substr(6,3)); // Wor (.substr(6 начало,3 колич. симв-ов))
+
+//     //Numbers
+// const num = 12.2;
+// console.log (Math.round(num));
+
+
+// const test = '12.2px';
+// console.log (parseInt(test)); //12 число
+// console.log (parseFloat(test)); //12.2
