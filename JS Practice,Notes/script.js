@@ -10,7 +10,6 @@
 
 // const obj = {a:50};
 //  obj.a = 10;
-
 //  console.log (obj);
 // let number = 4.6;
 
@@ -31,9 +30,10 @@
 // };
 // console.log (obj.name);
 
+//// МАССИВЫ . Содержат елементы строго по порядку
 // let arr = ['orange.jpg','plum.png',6 ,'apple.bmp', {}, ['unnamed fruite'], ]
 // console.log (arr [5]);
-// alert ('Hello');
+
 
 // const result = confirm('are you here?');
 // console.log (result);
@@ -48,9 +48,13 @@
 // console.log(`https://someurl.com/${category}/5`);
 
 // const user =  'Kos';
-// alert (`hello ${user}`);
+// console.log (`hello ${user}`);
 // console.log('arr' + '-object');
 // console.log(4 + '-object');
+
+//OPERATORS операторы
+
+// // typeof. ... возвращает тип данных 
 
 // let incr = 10,
 //     decr = 10;
@@ -66,8 +70,8 @@
 
 // console.log (2+2*2 === '8');
 
-// && //Оператор И
-// || // Оператор ИЛИ
+// && //Оператор И . возвращеат true если все условия true и false если хотя бы одно условие false 
+// || // Оператор ИЛИ возвращает true если одно из условий true и false если не одно из условий не true
 // ! Оператор отрицания
 // const isChecked = false,
 //       isClosed = true ;
@@ -76,6 +80,8 @@
 // const isChecked = false,
 //       isClosed = false ;
 // console.log (isChecked || ! isClosed); //true
+
+
 
 // if (4==4) {
 //     console.log('Ok');
@@ -94,6 +100,8 @@
 
 // const num = 50;
 // (num === 50 ) ? console.log('Ok') : console.log('Error');
+
+// LOOPS AND ITERATION циклы
 
 // const num = 50;
 // switch (num) {
@@ -145,12 +153,7 @@
 //     let num = 1;// внутри функц локальн перем.
 // }
 // showMessage ('Hey'); // вызов функции 
-function calc(num1,num2){
-    console.log(num1+num2);
-}
-const num1 = prompt ("?"),
-      num2 = prompt ("?");
-calc();
+
 // console.log (str); // Глобальная перем. 
 // // console.log (num); // локалные перем. не видны глобально
 
@@ -178,7 +181,6 @@ calc();
 
      // ARROW FUNCTIONS ()=>
 // const arrowFunction = (a,b) =>{
-
 //     return a+b; 
 // };
 // console.log ('hola' , arrowFunction(2,3));
@@ -208,3 +210,229 @@ calc();
 // const test = '12.2px';
 // console.log (parseInt(test)); //12 число
 // console.log (parseFloat(test)); //12.2
+
+
+//CALLBACK FUCTIONS функц кот выполн. только псле завершения выполн другой функц. 
+
+// function first (){
+//      //doSomething
+//      setTimeout(function() {
+//           console.log(1);
+//      },500);
+// }
+// function second(){
+//      console.log(2);
+// }
+// first();
+// second();
+//            //result 2,1
+
+// function learnJS(lang,callback){ //сначала выполн learnJS а потом вложенные callback функции
+//      console.log(`i learn ${lang}`);
+//      callback();
+// }
+// function done(){
+//      console.log('Ive done this lesson');
+// }
+// learnJS('JavaScript',done);     //Тип вызова с отдельной функцией
+//     // i learn JavaScript ; Ive done this lesson
+
+// learnJS('JavaScript',function(){       //Тип вызова с анонимной функцией
+//      console.log('Ive done this lesson');
+// }); // i learn JavaScript ; Ive done this lesson
+
+
+// OBJECTS and OBJECTS DESTRUCTURING. объекты (Ассоциативные массивы) и деструктуризация объектов
+
+
+// const options = {
+//      name: 'test',
+//      width: 1024,
+//      height: 1024,
+//      colors: {
+//           border: 'black',
+//           bg: 'red'
+//      },
+//      makeTest: function(){ // встроенный метод внутри объекта
+//           console.log('Works');
+//      }
+// };
+// options.makeTest(); //  вызов метода через имя объекта
+
+// console.log (Object.keys(options).length); // 4 //!ЗАПОМНИТЬ! метод "Object.keys()" созд массив со всеми ключами объекта, .length провер кол-во ключей.
+
+// const {border,bg} = options.colors; //ДЕСТРУКТУРИЗАЦИЯ, разделение объекта.
+// console.log (border);
+// delete options.name;
+// console.log(options);
+
+    //способ перебора объекта for(let ... in ...){}
+
+// for (let key in options){
+//      console.log(`Property ${key} has value ${options[key]}`);
+// }     // Property name has value test
+//       // Property width has value 1024
+//       //Property height has value 1024
+//       //Property colors has value [object Object]
+
+//    //Тоже самое,только с перебором объекта (colors) в обекте (options).
+//   let counter = 1;
+//   for (let key in options){
+//        if (typeof (options[key]) === 'object'){
+//             for (let i in options[key]){
+//                  console.log(`Property ${i} has value ${options[key][i]}`);
+//                  counter++;
+//                 } 
+//      }else {
+//           console.log(`Property ${key} has value ${options[key]}`);
+//           counter++;
+//      }
+//   }
+//   console.log (counter); // 6
+
+
+// // ARRAYs массивы
+// //МЕТОДЫ МАССИВОВ
+
+// const arr = [1,2,3,6,9];
+
+//arr.pop();//[ 1, 2, 3, 6 ] удаляет последний елемент массива
+//arr.push(10);//[ 1, 2, 3, 6, 9, 10 ] добавляет елемент в конец массива
+//console.log(arr);
+
+// for (let i = 0;i<arr.length;i++){ //перебор елментов массива при помощи цикла
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr){ //перебор елментов массива при помощи конструкции for(let ... of ...)
+//      console.log(value);
+// }
+
+// arr[99] = 0;
+// console.log(arr); //[ 1, 2, 3, 6, 9, <94 empty items>, 0 ]
+// console.log(arr.length); // 100 //свойство length выводит последниий индекс(+1)
+
+
+
+// const arr = [1,2,3,6,9]; 
+// arr.forEach(function(item,i,arr){
+//      console.log(`${i}: ${item} inside array: ${arr}`);
+// });    //0: 1 inside array: 1,2,3,6,9
+//        //1: 2 inside array: 1,2,3,6,9
+//        //2: 3 inside array: 1,2,3,6,9
+//        // 3: 6 inside array: 1,2,3,6,9
+//        // 4: 9 inside array: 1,2,3,6,9
+// // arr.map(); //перебирает массив МОДИФИЦИРУЯ ЕГО
+// // arr.filter(); // отфильтровывает массив по критерию который задан
+
+// const str = prompt("","");
+// const products = str.split(",");//елем. строки в єлем. массива только если данные стр. раздел запятой или друг знаком
+//      products.sort();//Сортирует по алфавиту елементы массива КАК СТРОКИ.
+// console.log (products.join("; "));// Массив кладет в строку разделяя ";"  или другим знаком
+
+// const arr = [1,43,3,16,9]; // Метод .sort не сортир числа по порядку
+// arr.sort(compareNum);
+//     console.log(arr);
+// function compareNum(a,b){   // !!! ЗАПОМНИТЬ ФУНКЦИЯ ДЛЯ СОРТИРОВКИ ЧИСЕЛ ПО ПОРЯДКУ
+//     return a-b; 
+// }    //  [ 1, 3, 9, 16, 43 ]
+
+
+
+// !!! ПЕРЕДАЧА ПО ССЫЛКЕ ИЛИ ПО ЗНАЧЕНИЮ !!! по ссылке- объекты, по значению- простые типы данных
+
+
+// let a = 5,
+//     b = a;
+
+//     b = b + 5; //меняем зачение b
+//     console.log(b); // 10
+//     console.log(a); // 5
+
+    // const obj = {
+    //     a:5,
+    //     b:1
+    // };
+    // const copy = obj;// copy это ссылка на obj
+    // copy.a = 10; // меняя copy меняем obj, 
+    // console.log(copy);
+    // console.log(obj);
+
+    // //  ПОВЕРХНОСТНОЕ КОПИРОВАНИЕ. Вложенные объэкты остсаются ссылками
+    // //Функция копирования объэкта при помощи ЦИКЛА
+    // function copy(mainObj){ 
+    //      let objCopy = {};
+    //          let key;
+    //          for (key in mainObj){ // перебераем и копируем в objCopy[key] из mainObj[key]
+    //              objCopy[key] = mainObj[key];
+    //          }
+    //          return objCopy;
+    // }
+    // const numbers = {
+    //     a:2,
+    //     b:5,
+    //     c:{
+    //         x:1,
+    //         y:3
+    //     }
+    // };
+    // const newNumbers = copy(numbers);
+    // newNumbers.a = 10;
+    // newNumbers.c.x = 15;
+    // console.log (newNumbers); // { a: 10, b: 5, c: { x: 15, y: 3 } }
+    // console.log (numbers); // { a: 2, b: 5, c: { x: 15, y: 3 } }
+
+    // // Функция копирования объэкта при помощи Object.assign
+    // const add = {
+    //     d:15,
+    //     e:20
+    // };
+    // console.log(Object.assign(numbers,add)); //в numbers добавляет add 
+    // const clone = Object.assign({},add);
+    // clone.d = 51;
+    // console.log(clone);//51
+    // console.log(add);//15
+    // //КОПИРОВАНИЕ МАССИВОВ , при помощи SLICE
+    // const oldArray = ['a','b','c'];
+    // const coppiedArray = oldArray.slice();
+    // coppiedArray.push('123');
+    // coppiedArray[0] = 'blabla';
+    // console.log(coppiedArray);
+    // console.log(oldArray);
+
+    // // Функция копирования объэкта или массива при помощи SPREAD ...
+    
+    // const video = ['youtube','vimeo','moviestape'],
+    //       blogs = ['workpress','livejournal','blogger'],
+    //       internet = [...video, ...blogs, 'social media'];//оператор ... рампаковывает массивы
+    //       console.log(internet);
+
+    //       function log (a,b,c){
+    //           console.log(a);
+    //           console.log(b);
+    //           console.log(c);
+    //       }
+    //       const num = [2,3,4];
+    //       log (...num); //2
+                           //3
+                           //4
+
+
+    // const array = ['a','b'];
+    // const otherArray = [...array];
+    // otherArray[0] = 'asd';
+    // console.log(otherArray); //[ 'asd', 'b' ]
+
+    // const q = {
+    //     one:1,
+    //     two:2,
+    //     three:{
+    //         q:'qw',
+    //         a:'as'
+    //     }
+    // };
+    // const a = {...q};
+    // a.one = 11;
+    // console.log (a); //{ one: 11, two: 2, three: { q: 'qw', a: 'as' } }
+    // console.log(q);//{ one: 1, two: 2, three: { q: 'qw', a: 'as' } }
+// ООП . Основы
