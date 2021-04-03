@@ -18,6 +18,8 @@
 
 // const person = 'Kos' ;
 
+//console.log('abcdefg'[0]); //а // [] обращение к елементу строки по номеру его индекса
+
 // const bool = true / false ;
 
 // let und ;
@@ -48,11 +50,15 @@
 // console.log(`https://someurl.com/${category}/5`);
 
 // const user =  'Kos';
-// console.log (`hello ${user}`);
+// console.log (`hello ${user}`); //Интерполяция- (`string ${}`);
 // console.log('arr' + '-object');
 // console.log(4 + '-object');
 
 //OPERATORS операторы
+ 
+// == сравнение. При сравн различн типов данных приводит все к числу. возвр boolean
+
+// === строгого равенства. сравнивает непосредственно то что получил. возвр boolean
 
 // // typeof. ... возвращает тип данных 
 
@@ -70,8 +76,8 @@
 
 // console.log (2+2*2 === '8');
 
-// && //Оператор И . возвращеат true если все условия true и false если хотя бы одно условие false 
-// || // Оператор ИЛИ возвращает true если одно из условий true и false если не одно из условий не true
+// && //Оператор И.Останавл и возвр первый false.Возвращеат true если все условия true и false если хотя бы одно условие false 
+// || // Оператор ИЛИ остан и возвр первое true если одно из условий true и false если не одно из условий не true
 // ! Оператор отрицания
 // const isChecked = false,
 //       isClosed = true ;
@@ -269,7 +275,7 @@
     //способ перебора объекта for(let ... in ...){}
 
 // for (let key in options){
-//      console.log(`Property ${key} has value ${options[key]}`);
+//      console.log(`Property ${key} has value ${options[key]}`); 
 // }     // Property name has value test
 //       // Property width has value 1024
 //       //Property height has value 1024
@@ -435,4 +441,54 @@
     // a.one = 11;
     // console.log (a); //{ one: 11, two: 2, three: { q: 'qw', a: 'as' } }
     // console.log(q);//{ one: 1, two: 2, three: { q: 'qw', a: 'as' } }
-// ООП . Основы
+
+// OOP. ООП, Основы
+
+// DYNAMIC TYPING . ДИНАМИЧЕСКАЯ ТИПИЗАЦИЯ 
+
+// To String
+//1)
+
+// console.log(typeof(String(null))); //string
+// console.log((String(null)));       //null
+// console.log(typeof(String(4)));    //string
+
+// //2
+
+// console.log(typeof(5 + '')); //string. Конкотенация-сложение строки с чем либо. - всегда остается строка.
+
+// const num = 5;
+// console.log('https://vk.com/catalog/' + num); // Динамическая строка
+
+// const fontSize = 26 + 'px'; //Cтили только строка и задаются с характ-ой. 26+'px' string
+
+// // To Number
+// // 1)
+// console.log(typeof(Number('4'))); //number
+// // 2) 
+// console.log(typeof(+'5')); //number
+// // 3)
+// console.log(typeof(parseInt('12px')));
+// console.log(typeof+('','hello')); //number
+
+// // To Boolean
+// // 0, '', null, undefined,NaN;// = трансформируется в false.Все остальное в true.
+
+// // 1)
+// let switcher = null; //например если элемента пока что нет
+// if (switcher){
+//     console.log('works');
+// } //false
+//     switcher = 1;
+// if (switcher){
+//     console.log('works');
+// } // works (true)
+
+// // 2)
+// console.log(typeof(Boolean('1')));//boolean
+// console.log(typeof(!!'1')); //boolean примен. оч редко
+// console.log(!!'1'); // true
+// console.log(Boolean('1')); //true
+// 3)
+
+
