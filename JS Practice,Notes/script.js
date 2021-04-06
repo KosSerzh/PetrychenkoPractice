@@ -1,16 +1,17 @@
 
 "use strict";
-// a = 15;
-// console.log (a);
-// let number = 5 ;
-// const leftBorderWidth = 1;
 
-// number = 10;
-// console.log (number);
+
+// Infinity, NaN
+// console.log(typeof(Infinity)); //number
+// console.log(typeof(NaN)); //number
+
+
 
 // const obj = {a:50};
 //  obj.a = 10;
-//  console.log (obj);
+//  console.log (obj);//{ a: 10 }
+
 // let number = 4.6;
 
 // console.log (-4/0);
@@ -186,10 +187,10 @@
 // logger ();
 
      // ARROW FUNCTIONS ()=>
-// const arrowFunction = (a,b) =>{
+// const arrowFunction = (a,b) => { //... = a =>{}; Если параметр один () скобки не ставить.
 //     return a+b; 
 // };
-// console.log ('hola' , arrowFunction(2,3));
+// console.log ('hola' , arrowFunction(2,3)); // hola 5
 
 
 //METHODS AND PROPERTIES
@@ -319,7 +320,7 @@
 // console.log(arr.length); // 100 //свойство length выводит последниий индекс(+1)
 
 
-
+    // forEach 
 // const arr = [1,2,3,6,9]; 
 // arr.forEach(function(item,i,arr){
 //      console.log(`${i}: ${item} inside array: ${arr}`);
@@ -491,4 +492,5 @@
 // console.log(Boolean('1')); //true
 // 3)
 
+// DOM Document Object Model . Обращаться к DOM при помощи document.
 
