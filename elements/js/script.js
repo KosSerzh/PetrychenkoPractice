@@ -14,7 +14,7 @@
 
 // console.log(btns);// HTMLCollection(5) [button, button, button, button, button]. Псевдомассив
 
-// const btns = document.getElementsByTagName('button')[1]; //<button>2</button>//HTMLCollection Получ конкр элем-а по номеру индекса в []
+// const btns = document.getElementsByTagName('button')[1];//<button>2</button>//HTMLCollection Получ конкр элем-а по номеру индекса в []
 // console.log(btns[2]);// работа с конкретным елементом ( извлечение эл. из псевдомассива HTMLCollection)
 // // !!! HTMLCollection == псевдомассив . для работы с конкретным элементом обращ к конкретн. элем. !!!
 
@@ -54,13 +54,13 @@ const box = document.getElementById('box'),
 
 
 
-    // Назначение InLine styles (приоритетны над другими записями стилей) создаются прямо в HTML
+    // style .Имеет множство методов.Назначение InLine styles(приоритетны над другими записями стилей) создаются прямо в HTML
 // box.style.backgroundColor = 'purple';//Создает InLine styles(приоритетны над другими записями стилей) прям в HTML
 // box.style.width = '300px';
 
 btns[0].style.borderRadius = '20%';
 btns[1].style.backgroundColor = 'green';
-
+btns[2].style.backgroundImage = 'url("folder/object")';
 circles[2].style.backgroundColor = 'indigo';
      // Назначение нескольких InLine styles через .cssText значения на языке CSS , НЕ В camelCase
 box.style.cssText = 'background-color: midnightBlue; width: 200px; height: 200px ';
@@ -79,7 +79,7 @@ hearts.forEach(item =>{ //в item передается heart
 // document.createElement //создает елементы на лету
 
 const div = document.createElement('div');  //создание CSS елемента в JS. пока существ ТОЛЬКО в JS,на странице не виден
-                                            // создю елем  в JS имеют много свойств
+                                            // созд елем  в JS имеют много свойств
 // const text = document.createTextNode('Ky-Ky');//созд текстов узел. использ оч редко
 
 div.classList.add ('black');// свойство .classList , метод .add () добавл класс
