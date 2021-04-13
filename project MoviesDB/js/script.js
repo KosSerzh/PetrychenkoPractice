@@ -63,7 +63,5 @@ movieDB.movies.forEach( (item,i)=>{
         <div class="delete"></div>
     </li>
     `;
-
-
 });
 
