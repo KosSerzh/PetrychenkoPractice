@@ -7,7 +7,7 @@
 
     // const btn = document.querySelector('button'),
     //       overlayVar = document.querySelector('.overlay'), //.class начин с тчки.Метод .querySelector,параметр('.overlay')
-    //       btns = document.querySelectorAll('button');
+    //       btn = document.querySelectorAll('button');
 
     // btn.onclick = function(){ // через свойство DOM дерева .onclick ; Использ оч редко
     //     alert('click');
@@ -77,7 +77,7 @@
     //'.overlay' родитель 'button' на оба назнач обраб-ки событий кот выполн одинак действ
     
     
-    // Назнач одного обработчика на группу елементов при помощи перебора псвдо массива
+    // Назнач одного обработчика на группу елементов при помощи перебора псвдомассива
 
         // btns.forEach(i=>{
         //     i.addEventListener('click', deleteEvent, {once: true});// выполняет событие один раз. Замена .removeEventListener
@@ -106,7 +106,7 @@
     console.log(document.body.firstChild);
     console.log(document.body.lastChild);
 
-    //Получение родителей соседей и детей елемента
+    //Получение родителей, соседей и детей елемента
     console.log(document.querySelector("#current").parentElement);// # селектор для ID//Возвр родителя елемента current
     console.log(document.querySelector("#current").parentElement.parentElement);//двойнн и больше использ,Возвр родителя родителя итд елемента
 
