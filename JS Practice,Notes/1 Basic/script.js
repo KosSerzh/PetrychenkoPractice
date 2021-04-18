@@ -105,8 +105,8 @@
 //     console.log('Ok');
 // }
 
-// const num = 50;
-// (num === 50 ) ? console.log('Ok') : console.log('Error');
+// const num = 49;
+// (num <50 ) ? console.log('Ok') : console.log('Error'); // Ok
 
 // LOOPS AND ITERATION циклы
 
@@ -202,7 +202,7 @@
 // console.log (arr.length); //3
 // console.log (str.toUpperCase());
 // const fruit = 'Some fruit';
-// console.log (fruit.indexOf('fruit'));
+// console.log (fruit.indexOf('fruit')); // 5
 
 
 // const logg = 'Hello World';
@@ -265,7 +265,7 @@
 //           console.log('Works');
 //      }
 // };
-// options.makeTest(); //  вызов метода через имя объекта
+// options.makeTest(); //Works //  вызов метода через имя объекта
 
 // console.log (Object.keys(options).length); // 4 //!ЗАПОМНИТЬ! метод "Object.keys()" созд массив со всеми ключами объекта, .length провер кол-во ключей.
 
@@ -304,9 +304,9 @@
 
 // const arr = [1,2,3,6,9];
 
-//arr.pop();//[ 1, 2, 3, 6 ] удаляет последний елемент массива
-//arr.push(10);//[ 1, 2, 3, 6, 9, 10 ] добавляет елемент в конец массива
-//console.log(arr);
+// arr.pop();//[ 1, 2, 3, 6 ] удаляет последний елемент массива
+// arr.push('siuvchn');//[ 1, 2, 3, 6, 9, 10 ] добавляет елемент в конец массива
+// console.log(arr);
 
 // for (let i = 0;i<arr.length;i++){ //перебор елментов массива при помощи цикла
 //     console.log(arr[i]);
