@@ -48,7 +48,7 @@
 //       wrapper = document.querySelector('.wrapper'),      
 //       hearts = document.querySelectorAll('.heart'),// querySelectorAll() добавл. метод .forEach() для переменной hearts
 //       oneHeart = document.querySelector('.heart'); // получает ПЕРВЫЙ селлектор из указанных
-// Получать доступ к елементу можно не через  document а через их родителя если он есть:
+// Получать доступ к елементу можно не через document а через их родителя если он есть:
     //hearts = wrapper.querySelectorAll('.heart'),// querySelectorAll() добавл. метод .forEach() для переменной hearts
     //oneHeart = wrapper.querySelector('.heart'),
 
@@ -76,20 +76,21 @@
 //методы для работы с елементами страницы,
 // document.createElement //создает елементы на лету
 
-// const div = document.createElement('div');  //создание CSS елемента в JS. пока существ ТОЛЬКО в JS,на странице не виден
+     // const div = document.createElement('div');  //создание CSS елемента в JS. пока существ ТОЛЬКО в JS,на странице не виден
                                             // созд елем  в JS имеют много свойств
-// const text = document.createTextNode('Ky-Ky');//созд текстов узел. использ оч редко
+     // const text = document.createTextNode('Ky-Ky');//созд текстов узел. использ оч редко
 
-// div.classList.add ('black');// свойство .classList , метод .add () добавл класс
+     // div.classList.add ('black');// свойство .classList , метод .add () добавл класс
 
 // document.body.append(div);//append добавл новый div в конец body в DOM
 // wrapper.append(div); //.querySelector получ эелемент .wrapper, append запис в его конец div
 // wrapper.prepend(div); //.querySelector получ эелемент .wrapper,prepend запис в его начало div
+
 //before, after
-// hearts[0].before(div); //hearts[0] елем и его индекс ПЕРЕД которым добавл нов елем
-// hearts[0].after(div); //hearts[0] елем и его индекс ПОСЛЕ которого добавл нов елем
-// circles[0].remove(); //удаляет елемент
-// hearts[0].replaceWith(circles[0]);//hearts[0] заменяемый елем,(circles[0])на который заменяем
+     // hearts[0].before(div); //hearts[0] елем и его индекс ПЕРЕД которым добавл нов елем
+     // hearts[0].after(div); //hearts[0] елем и его индекс ПОСЛЕ которого добавл нов елем
+     // circles[0].remove(); //удаляет елемент
+     // hearts[0].replaceWith(circles[0]);//hearts[0] заменяемый елем,(circles[0])на который заменяем
 
 // Старые конструкции и команды
 // wrapper.appendChild(div);// .appendChild добавл новый div в конец body в DOM. ЧЕРЕЗ ОБРАЩ К РОДИТЕЛЮ
