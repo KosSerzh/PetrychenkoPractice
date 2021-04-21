@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async,defer</title>
+</head>
+<body> 
+    <script defer src='script.js'></script> <!-- HTML атрибут defer загруж. внешн. елем. последовательно,
+                                               в фон. режиме одновременно с загрузкой DOM дерева-->
+    <!--<script defer src='test.js'></script>--><!--Без defer сначала загрузится 'test.js' так как он меньше и легче-->
+    
+    <!--<script async src='script.js'></script> --> <!--Скрипт с async загруж. в фонe,не зависимо от загрузки DOM и друг. скриптов-->
+    <!--<script async src='test.js'></script>--> 
+
+    <p>Hello Motherfuckers</p>
+    <p>fucking bullshit</p>
+    
+</body>
+</html>
