@@ -2,7 +2,11 @@
 // три способа назначения обработчика
 // Навигация по DOM дереву 
 
-    // <button onclick="alert('Click')"id="btn">Нажми меня</button>// onclic-обработчик.Назнач обработч прямо в HTML коде 
+    window.addEventListener('DOMContentLoaded', ()=>{ //загрузка HTML и построение DOM дерева в перв очередь.Потом внешн ресурсы 
+    // или можно через document.addEventListener('DOMContentLoaded', ()=>{});
+    
+
+        // <button onclick="alert('Click')"id="btn">Нажми меня</button>// onclic-обработчик.Назнач обработч прямо в HTML коде 
               //исольз ооочень редко
 
     // const btn = document.querySelector('button'),
@@ -98,31 +102,62 @@
 
 //Навигация по DOM елементам
 
-    console.log(document.documentElement); //.documentElement Свойство только для HTML тега
-    console.log(document.head);//получает head
-    console.log(document.body);//получает body; итд
+    // console.log(document.documentElement); //.documentElement Свойство только для HTML тега
+    // console.log(document.head);//получает head
+    // console.log(document.body);//получает body; итд
 
-    console.log(document.body.childNodes); //.сhildNodes получает все вложенные узлы родителя
-    console.log(document.body.firstChild);
-    console.log(document.body.lastChild);
+    // console.log(document.body.childNodes); //.сhildNodes получает все вложенные узлы родителя
+    // console.log(document.body.firstChild);
+    // console.log(document.body.lastChild);
 
     //Получение родителей, соседей и детей елемента
-    console.log(document.querySelector("#current").parentElement);// # селектор для ID//Возвр родителя елемента current
-    console.log(document.querySelector("#current").parentElement.parentElement);//двойнн и больше использ,Возвр родителя родителя итд елемента
+    // console.log(document.querySelector("#current").parentElement);// # селектор для ID//Возвр родителя елемента current
+    // console.log(document.querySelector("#current").parentElement.parentElement);//двойнн и больше использ,Возвр родителя родителя итд елемента
 
     // Дата атрибуты HTML5 стандарт data-...
     // получение Дата атрибута из css  только через [data-name="value"] 
-    console.log(document.querySelector('[data-current="3"]'));
+    // console.log(document.querySelector('[data-current="3"]'));
 
-    console.log(document.querySelector('[data-current="3"]').nextSibling);// Получ следующ елем после указанного
+    // console.log(document.querySelector('[data-current="3"]').nextSibling);// Получ следующ елем после указанного
 
     //Получение елементов из .childNodes. Всех кроме  nodeName: "#text" - текстовых нод
-    for (let node of document.body.childNodes ){
-        if (node.nodeName == '#text'){
-         continue;   
-        }
-        console.log(node); // Возвр все ноды кроме текстовых
-    }
+    // for (let node of document.body.childNodes ){
+    //     if (node.nodeName == '#text'){
+    //      continue;   
+    //     }
+    //     console.log(node); // Возвр все ноды кроме текстовых
+    // }
+
+// EVENTS for touch mobile devices // события для сенсорных мобильных устройств
+
+    // touchstart //начало прикосновения
+    // touchmove // скольжение
+    // touchend  // конец касания
+
+    // touchenter // вход в зону елемента
+    // touchleave // выход из зоны елемента
+    // touchcancel // выход за пределы окна браузера
+        //touches
+    const box = document.querySelector('.box'); //
+        box.addEventListener('touchstart', (e)=>{ 
+            e.preventDefault();// в touch событиях всегда примен preventDefault()
+        //     console.log('start');
+        // box.addEventListener('touchmove', ()=>{
+        //     console.log('move');
+        // box.addEventListener('touchend', ()=>{
+        //     console.log('end');
+
+        // box.addEventListener('touchstart', ()=>{
+            // console.log(e.touches); //TouchList {0: Touch, length: 1} //0: Touch, колич пальцев одноврем. на екране
+            // console.log(e.targetTouches); //TouchList {0: Touch, length: 1} количество пальцев на конкретном елеме.
+            // console.log(e.changedTouches); // список пальц учавств в текущем соб. (те,из всех на экране, кот учавств в событии)
+            console.log(e.changedTouches[0].pageX); // [0] ном пальца, отслеживание координат прикосновения
+        });
 
 
 
+
+        
+
+
+});
