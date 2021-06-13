@@ -43,35 +43,35 @@
 // Работа, действия с элементами на странце
 
 // const box = document.getElementById('box'),
-//       btns = document.getElementsByTagName('button'),
-//       circles = document.getElementsByClassName('circle'),
-//       wrapper = document.querySelector('.wrapper'),      
-//       hearts = document.querySelectorAll('.heart'),// querySelectorAll() добавл. метод .forEach() для переменной hearts
-//       oneHeart = document.querySelector('.heart'); // получает ПЕРВЫЙ селлектор из указанных
+       //btns = document.getElementsByTagName('button'),
+       //circles = document.getElementsByClassName('circle'),
+       //wrapper = document.querySelector('.wrapper'),      
+       //hearts = document.querySelectorAll('.heart'),// querySelectorAll() добавл. метод .forEach() для переменной hearts
+       //oneHeart = document.querySelector('.heart'); // получает ПЕРВЫЙ селлектор из указанных
 // Получать доступ к елементу можно не через document а через их родителя если он есть:
     //hearts = wrapper.querySelectorAll('.heart'),// querySelectorAll() добавл. метод .forEach() для переменной hearts
     //oneHeart = wrapper.querySelector('.heart'),
 
-    // style .Имеет множство методов.Назначение InLine styles(приоритетны над другими записями стилей) создаются прямо в HTML
-// box.style.backgroundColor = 'purple';//Создает InLine styles(приоритетны над другими записями стилей) прям в HTML
-// box.style.width = '300px';
+// style .Имеет множство методов.Назначение InLine styles(приоритетны над другими записями стилей) создаются прямо в HTML
+     // box.style.backgroundColor = 'purple';//Создает InLine styles(приоритетны над другими записями стилей) прям в HTML
+     // box.style.width = '300px';
 
-// btns[0].style.borderRadius = '20%';
-// btns[1].style.backgroundColor = 'green';
-// btns[2].style.backgroundImage = 'url("folder/object")';
-// circles[2].style.backgroundColor = 'indigo';
-     // Назначение нескольких InLine styles через .cssText значения на языке CSS , НЕ В camelCase
-// box.style.cssText = 'background-color: midnightBlue; width: 200px; height: 200px ';
-// box.style.cssText = `background-color:midnightBlue; width:${num}`;// в ``, с переменной, для динамически измен елементов
+     // btns[0].style.borderRadius = '20%';
+     // btns[1].style.backgroundColor = 'green';
+     // btns[2].style.backgroundImage = 'url("folder/object")';
+     // circles[2].style.backgroundColor = 'indigo';
+// Назначение нескольких InLine styles через .cssText значения на языке CSS , НЕ В camelCase
+     // box.style.cssText = 'background-color: midnightBlue; width: 200px; height: 200px ';
+     // box.style.cssText = `background-color:midnightBlue; width:${num}`;// в ``, с переменной, для динамически измен елементов
 
-     // Одно действие над несколькими элементами при помощи циклов, for (...Of...) и forEach с querySelectorAll
-//  for (let i = 0; i < hearts.length; i++ ){
-//      hearts[i].style.backgroundColor = 'OrangeRed';
-//  }
+// Одно действие над несколькими элементами при помощи циклов, for (...Of...) и forEach с querySelectorAll
+     //  for (let i = 0; i < hearts.length; i++ ){
+     //      hearts[i].style.backgroundColor = 'OrangeRed';
+     //  }
 
-// hearts.forEach(item =>{ //в item передается heart
-//     item.style.backgroundColor = 'black';
-// });
+     // hearts.forEach(item =>{ //в item передается heart
+     //     item.style.backgroundColor = 'black';
+     // });
 
 //методы для работы с елементами страницы,
 // document.createElement //создает елементы на лету
@@ -82,9 +82,9 @@
 
      // div.classList.add ('black');// свойство .classList , метод .add () добавл класс
 
-// document.body.append(div);//append добавл новый div в конец body в DOM
-// wrapper.append(div); //.querySelector получ эелемент .wrapper, append запис в его конец div
-// wrapper.prepend(div); //.querySelector получ эелемент .wrapper,prepend запис в его начало div
+     // document.body.append(div);//append добавл новый div в конец body в DOM
+     // wrapper.append(div); //.querySelector получ эелемент .wrapper, append запис в его конец div
+     // wrapper.prepend(div); //.querySelector получ эелемент .wrapper,prepend запис в его начало div
 
 //before, after
      // hearts[0].before(div); //hearts[0] елем и его индекс ПЕРЕД которым добавл нов елем
@@ -93,10 +93,10 @@
      // hearts[0].replaceWith(circles[0]);//hearts[0] заменяемый елем,(circles[0])на который заменяем
 
 // Старые конструкции и команды
-// wrapper.appendChild(div);// .appendChild добавл новый div в конец body в DOM. ЧЕРЕЗ ОБРАЩ К РОДИТЕЛЮ
-// wrapper.insertBefore(div, hearts[1]); // div новый елем, hearts[] -елем Перед которым вставл div
-// wrapper.removeChild(hearts[1]); //удаляет елемент
-// wrapper.replaceChild(circles[2],hearts[0]);//hearts[0] заменяемый елем,(circles[2])на который заменяем
+     // wrapper.appendChild(div);// .appendChild добавл новый div в конец body в DOM. ЧЕРЕЗ ОБРАЩ К РОДИТЕЛЮ
+     // wrapper.insertBefore(div, hearts[1]); // div новый елем, hearts[] -елем Перед которым вставл div
+     // wrapper.removeChild(hearts[1]); //удаляет елемент
+     // wrapper.replaceChild(circles[2],hearts[0]);//hearts[0] заменяемый елем,(circles[2])на который заменяем
 
 
 

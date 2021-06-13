@@ -75,10 +75,10 @@
 
 // console.log (5%2);
 
-// console.log (2+2*2 === '8');
+// console.log (2+2*2 === '8'); // false
 
 // && //Оператор И.Останавл и возвр первый false.Возвращеат true если все условия true и false если хотя бы одно условие false 
-// || // Оператор ИЛИ остан и возвр первое true если одно из условий true и false если не одно из условий не true
+// || // Оператор ИЛИ остан и возвр первое true если одно из условий true, и false если не одно из условий не true
 // ! Оператор отрицания
 // const isChecked = false,
 //       isClosed = true ;
@@ -89,12 +89,13 @@
 // console.log (isChecked || ! isClosed); //true
 
 
+// УСЛОВИЯ
 
 // if (4==4) {
 //     console.log('Ok');
 // } else {
 //     console.log('error');
-// }
+// }                          // Ok
 
 // const num = 50;
 // if (num<49) {
@@ -103,12 +104,12 @@
 //     console.log('TooMuch');
 // }else {
 //     console.log('Ok');
-// }
+// }    // Ok
 
 // const num = 49;
 // (num <50 ) ? console.log('Ok') : console.log('Error'); // Ok
 
-// LOOPS AND ITERATION циклы
+// LOOPS AND ITERATIONs циклы
 
 // const num = 50;
 // switch (num) {
@@ -197,24 +198,32 @@
 //METHODS AND PROPERTIES
     //Strings
 // const str = 'test';
-// const arr = [1, 2, 3];
 // console.log (str.length); // 4
-// console.log (arr.length); //3
 // console.log (str.toUpperCase());
+
 // const fruit = 'Some fruit';
 // console.log (fruit.indexOf('fruit')); // 5
 
+// const arr = [1, 2, 3];
+// console.log (arr.length); //3
+
+
+
 
 // const logg = 'Hello World';
-// console.log (logg.slice(6,11)); // World
+// console.log (logg.slice(6,11)); // World // c 6 по 11
 // console.log (logg.substring (6,10)); // Worl
 // console.log (logg.substr(6,3)); // Wor (.substr(6 начало,3 колич. симв-ов))
 
 //     //Numbers
-// const num = 12.2;
-// console.log (Math.round(num));
 
+const num = 12.2;
+console.log (Math.round(num));//12 //округл до ближзжайш целого знач
 
+const anotherNum = 93;
+console.log(Math.floor(anotherNum / 60)); // 1 //округл до нижн целого знач
+console.log(Math.ceil(anotherNum / 60)); // 2 //округл до верхн целого знач
+console.log(anotherNum % 60); //33 // % возвр ОСТАТОК ОТ ДЕЛЕНИЯ
 // const test = '12.2px';
 // console.log (parseInt(test)); //12 число
 // console.log (parseFloat(test)); //12.2
@@ -307,6 +316,8 @@
 // arr.pop();//[ 1, 2, 3, 6 ] удаляет последний елемент массива
 // arr.push('siuvchn');//[ 1, 2, 3, 6, 9, 10 ] добавляет елемент в конец массива
 // console.log(arr);
+// // arr.map(); //перебирает массив МОДИФИЦИРУЯ ЕГО
+// // arr.filter(); // отфильтровывает массив по критерию который задан
 
 // for (let i = 0;i<arr.length;i++){ //перебор елментов массива при помощи цикла
 //     console.log(arr[i]);
@@ -331,8 +342,7 @@
 //        //2: 3 inside array: 1,2,3,6,9
 //        // 3: 6 inside array: 1,2,3,6,9
 //        // 4: 9 inside array: 1,2,3,6,9
-// // arr.map(); //перебирает массив МОДИФИЦИРУЯ ЕГО
-// // arr.filter(); // отфильтровывает массив по критерию который задан
+
 
 // const str = prompt("","");
 // const products = str.split(",");//елем. строки в єлем. массива только если данные стр. раздел запятой или друг знаком
